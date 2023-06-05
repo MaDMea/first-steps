@@ -40,9 +40,8 @@
 #
 # 1. Пользователь вводит с клавиатуры номер дня недели (1-7). Необходимо вывести на экран названия дня недели.
 # Например, если 1, то на экране надпись понедельник, 2 — вторник и т.д.
-# #
-try:
-    day = int (input("Enter number of a day: "))
+
+day = int (input("Введите номер дня: "))
 if day == 1:
     print("Понедельник")
 elif day == 2:
@@ -57,21 +56,8 @@ elif day == 6:
     print("Суббота")
 elif day == 7:
     print("Воскресенье")
-elif:
-    except Exception("Please enter a valid date 1-7!")
-
-#     if 1 < len(name) <= 20:
-#         print(f"Hello, {name}")
-#     else:
-#         raise Exception("Please enter a valid name!")  # raise -> сгенерировать исключение (бросить исключение)
-#
-#     num = 0
-#     if num == 0:
-#         raise ZeroDivisionError("Не дели на ноль!")
-# except ZeroDivisionError as err:
-#     print("ashdfvbsdfvblsdvfbldsfv")
-# except Exception as e:
-#     print(f"Error: {e}")
+else:
+    print("Введите корректное число 1-7!")
 
 # 2. Пользователь вводит два числа. Определить, равны ли эти числа, и, если нет,
 # вывести их на экран в порядке возрастания
