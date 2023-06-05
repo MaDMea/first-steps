@@ -62,37 +62,40 @@
 # 2. Пользователь вводит два числа. Определить, равны ли эти числа, и, если нет,
 # вывести их на экран в порядке возрастания
 #
-a = int(input("Введите первое число: "))
-b = int(input("Введите второе число: "))
+# a = int(input("Введите первое число: "))
+# b = int(input("Введите второе число: "))
+#
+# if a == b:
+#     print("Числа равны!")
+# elif a != b:
+#     print(*sorted([a, b]))
+#     print("Числа не равны!")
 
-if a == b:
-    print("Числа равны!")
-elif a != b:
-    print(*sorted([a, b]))
-    print("Числа не равны!")
-
-# #
+#
 #
 # 3. Пользователь вводит два числа и матем действие: + - * или /
 #
 # В зависимости от введенного матем действия вывести результат
 
-
-# try:
-#     name = input("Enter you name: ")
+# print("Что бы выйти из программы введите 0 в метематическом действе")
+# while True:
 #
-#     if name == "vasya":
-#         raise Exception("Вася, пока!")
+#     s = input("Введите математическое действие: ")
+#     if s == "0":
+#         break
+#     if s not in ('+', '-', '*', '/'):
+#         continue
+#     a = int(input("Введите первое число: "))
+#     b = int(input("Введите второе число: "))
 #
-#     if 1 < len(name) <= 20:
-#         print(f"Hello, {name}")
-#     else:
-#         raise Exception("Please enter a valid name!")  # raise -> сгенерировать исключение (бросить исключение)
-#
-#     num = 0
-#     if num == 0:
-#         raise ZeroDivisionError("Не дели на ноль!")
-# except ZeroDivisionError as err:
-#     print("ashdfvbsdfvblsdvfbldsfv")
-# except Exception as e:
-#     print(f"Error: {e}")
+#     if s == '+':
+#         print("Сложение", a + b)
+#     elif s == '-':
+#         print("Вычитание", a - b)
+#     elif s == '*':
+#         print("Умножение", a * b)
+#     elif s == '/':
+#         if b != 0:
+#             print("Деление", a / b)
+#         else:
+#             print("Деление на ноль!")
