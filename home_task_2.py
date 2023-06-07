@@ -136,31 +136,60 @@
 # Произведите в строке замену одного слова на другое. Полученную строку
 # отобразите на экране.
 #
-string = input("Введите строку: ")
-word_to_find = input("Введите слово для поиска: ")
-word_to_replace = input("Введите слово для замены: ")
-new_string = ""
-word = ""
-found = False
-for char in string:
-   if char == " ":
-       if word == word_to_find:
-           new_string += word_to_replace + " "
-           found = True
-       else:
-           new_string += word + " "
-       word = ""
-   else:
-       word += char
-if word == word_to_find:
-   new_string += word_to_replace
-   found = True
-else:
-   new_string += word
-if found:
-   print("Измененная строка:", new_string)
-else:
-   print("Слово не найдено в строке.")
+# string = input("Введите строку: ")
+# word_to_find = input("Введите слово для поиска: ")
+# word_to_replace = input("Введите слово для замены: ")
+# new_string = ""
+# word = ""
+# found = False
+# for char in string:
+#    if char == " ":
+#        if word == word_to_find:
+#            new_string += word_to_replace + " "
+#            found = True
+#        else:
+#            new_string += word + " "
+#        word = ""
+#    else:
+#        word += char
+# if word == word_to_find:
+#    new_string += word_to_replace
+#    found = True
+# else:
+#    new_string += word
+# if found:
+#    print("Измененная строка:", new_string)
+# else:
+#    print("Слово не найдено в строке.")
 #
 #
 # 4. Дана строка. (сделать срезы)
+# - Сначала выведите третий символ этой строки.
+#
+# - Во второй строке выведите предпоследний символ этой строки.
+#
+# - В третьей строке выведите первые пять символов этой строки.
+#
+# - В четвертой строке выведите всю строку, кроме последних двух символов.
+#
+# - В пятой строке выведите все символы с четными индексами (считая, что индексация начинается с 0,
+# поэтому символы выводятся начиная с первого).
+#
+# - В шестой строке выведите все символы с нечетными индексами, то есть начиная со второго символа строки.
+#
+# - В седьмой строке выведите все символы в обратном порядке.
+#
+# - В восьмой строке выведите все символы строки через один в обратном порядке, начиная с последнего.
+#
+# - В девятой строке выведите длину данной строки.
+
+sentence = input("Введите строку: ")
+print(sentence[3])
+print(sentence[-2])
+print(sentence[:5])
+print(sentence[:-2])
+print(sentence[::2])
+print(sentence[1::2])
+print(sentence[::-1])
+print(sentence[::-2])
+print(len(sentence))
