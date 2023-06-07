@@ -136,6 +136,31 @@
 # Произведите в строке замену одного слова на другое. Полученную строку
 # отобразите на экране.
 #
+string = input("Введите строку: ")
+word_to_find = input("Введите слово для поиска: ")
+word_to_replace = input("Введите слово для замены: ")
+new_string = ""
+word = ""
+found = False
+for char in string:
+   if char == " ":
+       if word == word_to_find:
+           new_string += word_to_replace + " "
+           found = True
+       else:
+           new_string += word + " "
+       word = ""
+   else:
+       word += char
+if word == word_to_find:
+   new_string += word_to_replace
+   found = True
+else:
+   new_string += word
+if found:
+   print("Измененная строка:", new_string)
+else:
+   print("Слово не найдено в строке.")
 #
 #
 # 4. Дана строка. (сделать срезы)
