@@ -183,13 +183,13 @@
 #
 # - В девятой строке выведите длину данной строки.
 
-sentence = input("Введите строку: ")
-print(sentence[3])
-print(sentence[-2])
-print(sentence[:5])
-print(sentence[:-2])
-print(sentence[::2])
-print(sentence[1::2])
-print(sentence[::-1])
-print(sentence[::-2])
-print(len(sentence))
+# sentence = input("Введите строку: ")
+# print(sentence[3])
+# print(sentence[-2])
+# print(sentence[:5])
+# print(sentence[:-2])
+# print(sentence[::2])
+# print(sentence[1::2])
+# print(sentence[::-1])
+# print(sentence[::-2])
+# print(len(sentence))
