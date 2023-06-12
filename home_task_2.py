@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-#При выполнении дз использовать Git (делать коммиты, работать в develop ветке,
+# При выполнении дз использовать Git (делать коммиты, работать в develop ветке,
 # для каждой задачи отдельная feature/<название_ветки> ветка из develop ветки,
 # после завершения работы над задачей - делать merge feature ветки в dev ветку,
 # после выполнения всех заданий сделать merge develop в master)
@@ -212,60 +212,45 @@
 #
 import random
 
-numbers = [random.randint(-10, 10) for i in range (10)]
+numbers = [random.randint(-10, 10) for i in range(10)]
 sum_neg = 0
-sum_chet = 0
-sum_nechet = 0
-product_3 = 1
-min = 0
-max = 0
-# for i in range(1, 10):
-#     numbers.append(random.randint(-10, 10))
+sum_odd = 0
+sum_even = 0
+product_3 = 0
 print(numbers)
-for j in numbers:
-    if j < 0:
-        sum_neg += j
+for i in numbers:
+    if i < 0:
+        sum_neg += i
         print("Summa otricat", sum_neg)
-for j in numbers:
-    if j % 2:
-        sum_chet += j
-        print("Summa chetnyh", sum_chet)
-for j in numbers:
-    if j % 2!= 0:
-        sum_nechet += j
-        print("Summa nechetnyh", sum_nechet)
-for j in range(len(numbers)):
-    if numbers[j] % 3 ==0:
-        product_3 *= numbers[j]
-        print("Proizved index 3 ",product_3)
-for j in numbers:
-    if numbers[j] < numbers[min]:
-        min = j
-    elif numbers[j] > numbers[max]:
-        max = j
-
-
-# numbers = []
-# sum_neg = 0
-# sum_chet = 0
-# sum_nechet = 0
-# product_3 = 0
-# prod_min_max = 0
-# sum_first_last_poz = 0
-# print(random.randint(-10, 10))
-# # print(len(numbers))
+for i in numbers:
+    if i % 2:
+        sum_odd += i
+        print("Summa chetnyh", sum_odd)
+for i in numbers:
+    if i % 2 != 0:
+        sum_even += i
+        print("Summa nechetnyh", sum_even)
+for i in range(len(numbers)):
+    if numbers[i] % 3 == 0:
+        product_3 *= numbers[i]
+        print("Proizved index 3 ", product_3)
+# min_num = 0
+# max_num = 0
+# for i in numbers:
+#     if numbers[i] < numbers[min_num]:
+#         min_num = i
+#     elif numbers[i] > numbers[max_num]:
+#         max_num = i
+#     print(numbers[min_num], numbers[max_num])
+#     if min_num > max_num:
+#         min_num, max_num = max_num, min_num
+#     product_min_max = 0
+#     for j in range(min_num+1, max_num):
+#         product_min_max += numbers[j]
+#         print("Proizved min max ", product_min_max)
 #
-# for i in range(len(numbers)):
-#     numbers.append(random.randint(-10, 10))
-#     print(numbers[i], end=" ")
-#     sum_neg += numbers[i]
-#     if numbers[i] < 0:
-#         sum_neg += numbers[i]
-#     print(sum_neg)
 #
-# print(len(numbers))
-
-
+#
 #  Задание 2
 #
 # Есть список целых, заполненный случайными числами. На основании данных этого массива нужно:
@@ -277,3 +262,24 @@ for j in numbers:
 # ■ Создать список целых, содержащий только отрицательные числа из первого списка;
 #
 # ■ Создать список целых, содержащий только положительные числа из первого списка.
+
+
+# OK
+# numbers = [random.randint(-10, 10) for i in range (10)]
+# print(numbers)
+#
+# odd_list = [(i) for i in numbers if i % 2 == 0]
+# print("List even", odd_list)
+#
+# even_list = [(i) for i in numbers if i % 2 != 0]
+# print("List odd", even_list)
+#
+# negative_list = [(i) for i in numbers if i < 0]
+# print("List negative", negative_list)
+#
+# positive_list = [(i) for i in numbers if i >= 0]
+# print("List positive", positive_list)
+#
+#
+#
+#
