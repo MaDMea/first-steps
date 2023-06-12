@@ -193,3 +193,87 @@
 # print(sentence[::-1])
 # print(sentence[::-2])
 # print(len(sentence))
+
+# Задание 1
+#
+# В списке целых, заполненном случайными числами вычислить:
+#
+# ■ Сумму отрицательных чисел;
+#
+# ■ Сумму четных чисел;
+#
+# ■ Сумму нечетных чисел;
+#
+# ■ Произведение элементов с индексами кратными 3;
+#
+# ■ Произведение элементов между минимальным и максимальным элементом;
+#
+# ■ Сумму элементов, находящихся между первым и последним положительными элементами.
+#
+import random
+
+numbers = [random.randint(-10, 10) for i in range (10)]
+sum_neg = 0
+sum_chet = 0
+sum_nechet = 0
+product_3 = 1
+min = 0
+max = 0
+# for i in range(1, 10):
+#     numbers.append(random.randint(-10, 10))
+print(numbers)
+for j in numbers:
+    if j < 0:
+        sum_neg += j
+        print("Summa otricat", sum_neg)
+for j in numbers:
+    if j % 2:
+        sum_chet += j
+        print("Summa chetnyh", sum_chet)
+for j in numbers:
+    if j % 2!= 0:
+        sum_nechet += j
+        print("Summa nechetnyh", sum_nechet)
+for j in range(len(numbers)):
+    if numbers[j] % 3 ==0:
+        product_3 *= numbers[j]
+        print("Proizved index 3 ",product_3)
+for j in numbers:
+    if numbers[j] < numbers[min]:
+        min = j
+    elif numbers[j] > numbers[max]:
+        max = j
+
+
+# numbers = []
+# sum_neg = 0
+# sum_chet = 0
+# sum_nechet = 0
+# product_3 = 0
+# prod_min_max = 0
+# sum_first_last_poz = 0
+# print(random.randint(-10, 10))
+# # print(len(numbers))
+#
+# for i in range(len(numbers)):
+#     numbers.append(random.randint(-10, 10))
+#     print(numbers[i], end=" ")
+#     sum_neg += numbers[i]
+#     if numbers[i] < 0:
+#         sum_neg += numbers[i]
+#     print(sum_neg)
+#
+# print(len(numbers))
+
+
+#  Задание 2
+#
+# Есть список целых, заполненный случайными числами. На основании данных этого массива нужно:
+#
+# ■ Создать список целых, содержащий только четные числа из первого списка;
+#
+# ■ Создать список целых, содержащий только нечетные числа из первого списка;
+#
+# ■ Создать список целых, содержащий только отрицательные числа из первого списка;
+#
+# ■ Создать список целых, содержащий только положительные числа из первого списка.
