@@ -218,39 +218,60 @@ numbers = [random.randint(-10, 10) for i in range(10)]
 sum_neg = 0
 sum_odd = 0
 sum_even = 0
-product_3 = 0
+product_3 = 1
+min_num = 0
+max_num = 0
+product_min_max = 1
 print(numbers)
-for i in numbers:
-    if i < 0:
-        sum_neg += i
-        print("Summa otricat", sum_neg)
-for i in numbers:
-    if i % 2:
-        sum_odd += i
-        print("Summa chetnyh", sum_odd)
-for i in numbers:
-    if i % 2 != 0:
-        sum_even += i
-        print("Summa nechetnyh", sum_even)
-for i in range(len(numbers)):
-    if numbers[i] % 3 == 0:
-        product_3 *= numbers[i]
-        print("Proizved index 3 ", product_3)
-# min_num = 0
-# max_num = 0
 # for i in numbers:
-#     if numbers[i] < numbers[min_num]:
-#         min_num = i
-#     elif numbers[i] > numbers[max_num]:
-#         max_num = i
-#     print(numbers[min_num], numbers[max_num])
-#     if min_num > max_num:
-#         min_num, max_num = max_num, min_num
-#     product_min_max = 0
-#     for j in range(min_num+1, max_num):
-#         product_min_max += numbers[j]
-#         print("Proizved min max ", product_min_max)
-#
+#     if i < 0:
+#         sum_neg += i
+#         print("Summa otricat", sum_neg)
+# for i in numbers:
+#     if i % 2:
+#         sum_odd += i
+#         print("Summa chetnyh", sum_odd)
+# for i in numbers:
+#     if i % 2 != 0:
+#         sum_even += i
+#         print("Summa nechetnyh", sum_even)
+# for i in range(len(numbers)):
+#     if numbers[i] % 3 == 0:
+#         product_3 *= numbers[i]
+#         print("Proizved index 3 ", product_3)
+
+for j in numbers:
+    if numbers[j] < numbers[min_num]:
+        min_num = j
+    elif numbers[j] > numbers[max_num]:
+        max_num = j
+    min_value = min(numbers)
+    min_num = numbers.index(min_value)
+    print("Min value: ", min_value)
+
+    print("Min index: ", min_num)
+    max_value = max(numbers)
+    max_num = numbers.index(max_value)
+    print("Max value: ", max_value)
+
+    print("Max index: ", max_num)
+
+    for j in range(len(numbers)):
+        if numbers[j] > numbers[max_num]:
+            max_num = j
+        if numbers[j] < numbers[min_num]:
+            min_num = j
+        a, b = min(max_num, min_num), max(max_num, min_num)
+        if a < j < b:
+            product_min_max *= j
+            print("Proizv megdu: ", product_min_max)
+    # if min_num > max_num:
+    #     # min_num, max_num = max_num, min_num
+    #     product_min_max = 1
+    # for j in range(min_num+1, max_num):
+    #     product_min_max *= numbers[j]
+    #     print("Proizved min max ", product_min_max)
+
 #
 #
 #  Задание 2
