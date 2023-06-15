@@ -302,20 +302,20 @@ import random
 
 
 # OK
-numbers = [random.randint(-10, 10) for i in range (10)]
-print(numbers)
-
-odd_list = [(i) for i in numbers if i % 2 == 0]
-print("List even", odd_list)
-
-even_list = [(i) for i in numbers if i % 2 != 0]
-print("List odd", even_list)
-
-negative_list = [(i) for i in numbers if i < 0]
-print("List negative", negative_list)
-
-positive_list = [(i) for i in numbers if i >= 0]
-print("List positive", positive_list)
+# numbers = [random.randint(-10, 10) for i in range (10)]
+# print(numbers)
+#
+# odd_list = [(i) for i in numbers if i % 2 == 0]
+# print("List even", odd_list)
+#
+# even_list = [(i) for i in numbers if i % 2 != 0]
+# print("List odd", even_list)
+#
+# negative_list = [(i) for i in numbers if i < 0]
+# print("List negative", negative_list)
+#
+# positive_list = [(i) for i in numbers if i >= 0]
+# print("List positive", positive_list)
 #
 #
 #
