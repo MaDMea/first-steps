@@ -214,64 +214,78 @@
 
 import random
 
-numbers = [random.randint(-10, 10) for i in range(10)]
-sum_neg = 0
-sum_odd = 0
-sum_even = 0
-product_3 = 1
-min_num = 0
-max_num = 0
-product_min_max = 1
-print(numbers)
+# numbers = [random.randint(-10, 10) for i in range(10)]
+# sum_neg = 0
+# sum_odd = 0
+# sum_even = 0
+# product_3 = 1
+# min_num = 0
+# max_num = 0
+# product_min_max = 1
+# print(numbers)
 # for i in numbers:
 #     if i < 0:
 #         sum_neg += i
-#         print("Summa otricat", sum_neg)
+# print("Summa otricat", sum_neg)
+#
 # for i in numbers:
-#     if i % 2:
+#     if i % 2 == 0:
 #         sum_odd += i
-#         print("Summa chetnyh", sum_odd)
+#
+# print("Summa chetnyh", sum_odd)
+#
 # for i in numbers:
 #     if i % 2 != 0:
 #         sum_even += i
-#         print("Summa nechetnyh", sum_even)
+#
+# print("Summa nechetnyh", sum_even)
+#
 # for i in range(len(numbers)):
-#     if numbers[i] % 3 == 0:
+#     if i % 3 == 0:
 #         product_3 *= numbers[i]
-#         print("Proizved index 3 ", product_3)
-
-for j in numbers:
-    if numbers[j] < numbers[min_num]:
-        min_num = j
-    elif numbers[j] > numbers[max_num]:
-        max_num = j
-    min_value = min(numbers)
-    min_num = numbers.index(min_value)
-    print("Min value: ", min_value)
-
-    print("Min index: ", min_num)
-    max_value = max(numbers)
-    max_num = numbers.index(max_value)
-    print("Max value: ", max_value)
-
-    print("Max index: ", max_num)
-
-    for j in range(len(numbers)):
-        if numbers[j] > numbers[max_num]:
-            max_num = j
-        if numbers[j] < numbers[min_num]:
-            min_num = j
-        a, b = min(max_num, min_num), max(max_num, min_num)
-        if a < j < b:
-            product_min_max *= j
-            print("Proizv megdu: ", product_min_max)
-    # if min_num > max_num:
-    #     # min_num, max_num = max_num, min_num
-    #     product_min_max = 1
-    # for j in range(min_num+1, max_num):
-    #     product_min_max *= numbers[j]
-    #     print("Proizved min max ", product_min_max)
-
+#
+# print("Proizved index 3 ", product_3)
+#
+#
+#
+# min_value = min(numbers)
+# max_value = max(numbers)
+# min_value_index = numbers.index(min_value)
+# max_value_index = numbers.index(max_value)
+#
+# if max_value_index - min_value_index != 0:
+#     if min_value_index > max_value_index:
+#         min_value_index, max_value_index = max_value_index, min_value_index
+#
+#     mult = 1
+#
+#     for i in range(min_value_index + 1, max_value_index):
+#         mult *= numbers[i]
+#
+#     print(mult)
+#
+# first_index = 0
+# last_index = 0
+# for i in range(len(numbers)):
+#     if numbers[i] > 0:
+#         first_index = i
+#         break
+#
+# for i in range(len(numbers) - 1, -1, -1):
+#     if numbers[i] > 0:
+#         last_index = i
+#         break
+#
+# print(first_index)
+# print(last_index)
+#
+#
+# if first_index != last_index:
+#     my_sum = 0
+#     for i in range(first_index + 1, last_index):
+#         my_sum += numbers[i]
+#
+#     print(my_sum)
 #
 #
 #  Задание 2
@@ -288,20 +302,20 @@ for j in numbers:
 
 
 # OK
-# numbers = [random.randint(-10, 10) for i in range (10)]
-# print(numbers)
-#
-# odd_list = [(i) for i in numbers if i % 2 == 0]
-# print("List even", odd_list)
-#
-# even_list = [(i) for i in numbers if i % 2 != 0]
-# print("List odd", even_list)
-#
-# negative_list = [(i) for i in numbers if i < 0]
-# print("List negative", negative_list)
-#
-# positive_list = [(i) for i in numbers if i >= 0]
-# print("List positive", positive_list)
+numbers = [random.randint(-10, 10) for i in range (10)]
+print(numbers)
+
+odd_list = [(i) for i in numbers if i % 2 == 0]
+print("List even", odd_list)
+
+even_list = [(i) for i in numbers if i % 2 != 0]
+print("List odd", even_list)
+
+negative_list = [(i) for i in numbers if i < 0]
+print("List negative", negative_list)
+
+positive_list = [(i) for i in numbers if i >= 0]
+print("List positive", positive_list)
 #
 #
 #
