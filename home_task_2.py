@@ -360,20 +360,20 @@ import random
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
-def is_prime(number):
-    if number == 1:
-        return True
-    for divider in range(2, number):
-        if number % divider == 0:
-            return False
-    return True
-
-
-primes_count = 0
-for number in nums:
-    primes_count += is_prime(number)
-
-print(primes_count)
+# def is_prime(number):
+#     if number == 1:
+#         return True
+#     for divider in range(2, number):
+#         if number % divider == 0:
+#             return False
+#     return True
+#
+#
+# primes_count = 0
+# for number in nums:
+#     primes_count += is_prime(number)
+#
+# print(primes_count)
 #
 # Задание 4
 #
@@ -381,12 +381,32 @@ print(primes_count)
 # Из функции нужно вернуть количество удаленных элементов.
 #
 #
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#
+#
+# def delete_num(nums):
+#     for i in nums:
+#         if i == 6:
+#             nums.remove(i)
+#     return nums
+#
+#
+# print(delete_num([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
 #
 # Задание 5
 #
 # Напишите функцию, которая получает два списка в качестве параметра и возвращает список,
 # содержащий элементы обоих списков.
 #
+# list_1 = [1, 3, 5]
+# list_2 = [2, 4, 6, 8, 10]
+#
+# def list_add(list_1, list_2):
+#     combined_list = [list_1, list_2]
+#     new_list = [i for sublist in combined_list for i in sublist]
+#     return new_list
+# print(list_add(list_1, list_2))
 #
 #
 # Задание 6
@@ -394,3 +414,17 @@ print(primes_count)
 # Напишите функцию, высчитывающую степень каждого элемента списка целых.
 # Значение для степени передаётся в качестве параметра, список тоже передаётся в качестве параметра.
 # Функция возвращает новый список, содержащий полученные результаты.
+
+def list_as_degree_from_input_list(degree_value, list_for_operation):
+    try:
+        list_for_return = [i ** degree_value for i in list_for_operation]
+
+    except Exception:
+        list_for_return = ["incorrect input"]
+    return list_for_return
+
+
+nums = [1, 3, 5, 13, -4, 22, 4, 123, 222, 39]
+print(nums)
+print(list_as_degree_from_input_list(2, nums))
+
