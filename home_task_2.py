@@ -415,16 +415,16 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # Значение для степени передаётся в качестве параметра, список тоже передаётся в качестве параметра.
 # Функция возвращает новый список, содержащий полученные результаты.
 
-def list_as_degree_from_input_list(degree_value, list_for_operation):
-    try:
-        list_for_return = [i ** degree_value for i in list_for_operation]
-
-    except Exception:
-        list_for_return = ["incorrect input"]
-    return list_for_return
-
-
-nums = [1, 3, 5, 13, -4, 22, 4, 123, 222, 39]
-print(nums)
-print(list_as_degree_from_input_list(2, nums))
+# def list_as_degree_from_input_list(degree_value, list_for_operation):
+#     try:
+#         list_for_return = [i ** degree_value for i in list_for_operation]
+#
+#     except Exception:
+#         list_for_return = ["incorrect input"]
+#     return list_for_return
+#
+#
+# nums = [1, 3, 5, 13, -4, 22, 4, 123, 222, 39]
+# print(nums)
+# print(list_as_degree_from_input_list(2, nums))
 
