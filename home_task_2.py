@@ -212,7 +212,7 @@
 #
 
 
-import random
+# import random
 
 # numbers = [random.randint(-10, 10) for i in range(10)]
 # sum_neg = 0
@@ -359,7 +359,6 @@ import random
 #
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-
 # def is_prime(number):
 #     if number == 1:
 #         return True
@@ -470,3 +469,66 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # a = int(input("Enter first number:"))
 # b = int(input("Enter second number:"))
 #  # print(sum_range)
+
+# Homework 8
+# Написать валидации с помощью регулярных выражений:
+#
+# - мобильный номер телефона (только цифры, возможное наличие плюса, длина номера)
+
+# import re
+#
+# def validate_mobile_number(number):
+#     pattern = re.compile(r'^\+?\d{10,15}$')
+#     return bool(pattern.match(number))
+#
+# mobile_number = "+1234567890"
+# print(validate_mobile_number(mobile_number))
+#
+# - домашний номер телефона (только цифры и длина номера)
+
+# def validate_home_number(number):
+#     pattern = re.compile(r'^\d{5,10}$')
+#     return bool(pattern.match(number))
+#
+# home_number = "1234567"
+# print(validate_home_number(home_number))
+#
+# - email (наличие @, домена: gmail.com например, минимальная длина и максимальная на ваш выбор)
+
+# def validate_email(email):
+#     pattern = re.compile(r'^[\w\.-]+@[\w\.-]+\.\w{2,4}$')
+#     return bool(pattern.match(email))
+#
+# email = "example@gmail.com"
+# print(validate_email(email))
+#
+# - ФИО клиента (3 слова, минимальная длина 2 символа, максимальная длина 20)
+
+# def validate_full_name(name):
+#     pattern = re.compile(r'^[A-Za-zА-Яа-я]{2,20}\s[A-Za-zА-Яа-я]{2,20}\s[A-Za-zА-Яа-я]{2,20}$')
+#     return bool(pattern.match(name))
+#
+# full_name = "Иванов Иван Иванович"
+# print(validate_full_name(full_name))
+
+
+# Homework 9
+
+# 1. Дан текстовый файл. Необходимо создать новый файл, в который требуется переписать
+# из исходного файла все слова, состоящие не менее чем из семи букв.
+#
+# with open("test.txt", "r") as input_file:
+#     with open("new_test.txt", "w") as output_file:
+#         for line in input_file:
+#             words = line.split()
+#             long_words = [word for word in words if len(word) >= 7]
+#             output_file.write(" ".join(long_words) + "\n")
+#
+# 2. Дан текстовый файл. Подсчитать количество слов в нём.
+
+
+# with open("test_2.txt", "r") as file:
+#     content = file.read()
+#     words = content.split()
+#     word_count = len(words)
+# print("Количество слов в файле:", word_count)
