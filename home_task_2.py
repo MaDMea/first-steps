@@ -428,3 +428,45 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # print(nums)
 # print(list_as_degree_from_input_list(2, nums))
 
+# Задание 1.
+#
+# Написать рекурсивную функцию нахождения степени числа.
+#
+#
+# def power(base, exp):
+#     if (exp == 1):
+#         return (base)
+#     if (exp != 1):
+#         return (base * power(base, exp - 1))
+# base = int(input("Введите число: "))
+# exp = int(input("Введите его степень: "))
+# print("Результат возведения в степень равен:", power(base, exp))
+#
+# Задание 2.
+#
+# Написать рекурсивную функцию, которая выводит N звезд в ряд, число N задает пользователь.
+# Проиллюстрируйте работу функции примером. (протестировать)
+#
+#
+# def stars(n):
+#
+#    return '' if n<=0 else '*'+stars(n-1)
+#
+# print(stars(int(input('введите количество звезд: '))))
+#
+# Задание 3.
+#
+# Написать рекурсивную функцию, которая вычисляет сумму всех чисел в диапазоне от a до b.
+# Пользователь вводит a и b. Проиллюстрируйте работу функции примером.
+
+# def sum_range(a, b):
+#
+#     if a > b:
+#
+#         return 0
+#
+#     return a + sum_range(a+1, b)
+
+a = int(input("Enter first number:"))
+b = int(input("Enter second number:"))
+#  # print(sum_range)
