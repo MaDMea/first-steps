@@ -467,6 +467,6 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 #
 #     return a + sum_range(a+1, b)
 
-a = int(input("Enter first number:"))
-b = int(input("Enter second number:"))
+# a = int(input("Enter first number:"))
+# b = int(input("Enter second number:"))
 #  # print(sum_range)
